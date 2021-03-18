@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>12b57b90-656f-456e-8e91-4638ff061096</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ToDoList.Web</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)frontend\.gitignore" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\components\item-lista.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\index.css" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)frontend\package-lock.json" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\public\favicon.ico" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\public\index.html" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\public\logo192.png" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\public\logo512.png" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\public\manifest.json" />
+    <Content Include="$(MSBuildThisFileDirectory)frontend\public\robots.txt" />
+  </ItemGroup>
+</Project>
