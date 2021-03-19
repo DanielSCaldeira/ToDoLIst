@@ -17,18 +17,18 @@ namespace ToDoList.Repository
         /// Buscar lista de tarefas
         /// </summary>
         /// <returns></returns>
-        public List<ListaDTO> Get()
+        public List<TodoDTO> Get()
         {
             try
             {
                 var registros = DbContext.Listas.OrderBy(x => x.Id).ToList();
 
                 return registros
-                    .Select(x => new ListaDTO()
+                    .Select(x => new TodoDTO()
                     {
-                        Ativo = x.Ativo,
+                        Done = x.Done,
                         CriadoEm = x.CriadoEm,
-                        Descricao = x.Descricao,
+                        Todo = x.Todo,
                         Id = x.Id
                     }).ToList();
             }
@@ -42,7 +42,7 @@ namespace ToDoList.Repository
         /// Inserir tarefa
         /// </summary>
         /// <param name="registro">Registro da tarefa a ser inserida</param>
-        public void Post(ListaDTO registro)
+        public TodoDTO Post(TodoDTO registro)
         {
             try
             {
@@ -51,14 +51,23 @@ namespace ToDoList.Repository
                     throw new Exception("Registo não pode conter ID preenchido!");
                 }
 
-                var resultado = new Lista()
+                var resultado = new TodoItem()
                 {
-                    Ativo = true,
+                    Done = registro.Done,
                     CriadoEm = DateTime.Now,
-                    Descricao = registro.Descricao
+                    Todo = registro.Todo
                 };
                 DbContext.Listas.Add(resultado);
                 DbContext.SaveChanges();
+
+                return new TodoDTO()
+                {
+                    CriadoEm = resultado.CriadoEm,
+                    Done = resultado.Done,
+                    Id = resultado.Id,
+                    Todo = resultado.Todo
+                };
+
             }
             catch (Exception)
             {
@@ -70,7 +79,7 @@ namespace ToDoList.Repository
         /// Atualizar tarefa
         /// </summary>
         /// <param name="registro">Registro da tarefa a ser atualizada</param>
-        public void Put(ListaDTO registro)
+        public void Put(TodoDTO registro)
         {
             try
             {
@@ -81,9 +90,9 @@ namespace ToDoList.Repository
                     throw new Exception("Registo não existe na base de dados!");
                 }
 
-                resultado.Ativo = registro.Ativo;
+                resultado.Done = registro.Done;
                 resultado.CriadoEm = DateTime.Now;
-                resultado.Descricao = registro.Descricao;
+                resultado.Todo = registro.Todo;
 
                 DbContext.Listas.Update(resultado);
                 DbContext.SaveChanges();
@@ -122,11 +131,11 @@ namespace ToDoList.Repository
         /// </summary>
         /// <param name="descricao">Texto para a consulta</param>
         /// <returns>Lista de itens de tarefas</returns>
-        public List<Lista> Search(string descricao)
+        public List<TodoItem> Search(string descricao)
         {
             try
             {
-                return DbContext.Listas.Where(x => x.Descricao.ToUpper() == descricao.ToUpper()).ToList();
+                return DbContext.Listas.Where(x => x.Todo.ToUpper() == descricao.ToUpper()).ToList();
             }
             catch (Exception)
             {

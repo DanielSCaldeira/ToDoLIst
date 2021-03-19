@@ -9,13 +9,23 @@
     <Import_RootNamespace>ToDoList.Web</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)frontend\.env" />
     <None Include="$(MSBuildThisFileDirectory)frontend\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)frontend\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)frontend\src\components\item-lista.js" />
-    <None Include="$(MSBuildThisFileDirectory)frontend\src\index.css" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\App.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\components\Todo.js" />
     <None Include="$(MSBuildThisFileDirectory)frontend\src\index.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\reportWebVitals.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\services\api.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\services\TodoService.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\setupTests.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\store\actions\TodoActions.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\store\index.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\src\store\reducers\TodoReducer.js" />
+    <None Include="$(MSBuildThisFileDirectory)frontend\yarn.lock" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)frontend\db.json" />
     <Content Include="$(MSBuildThisFileDirectory)frontend\package-lock.json" />
     <Content Include="$(MSBuildThisFileDirectory)frontend\package.json" />
     <Content Include="$(MSBuildThisFileDirectory)frontend\public\favicon.ico" />

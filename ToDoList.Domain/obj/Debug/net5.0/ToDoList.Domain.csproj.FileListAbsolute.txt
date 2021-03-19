@@ -2,7 +2,6 @@ C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\bin\Debug\ne
 C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\bin\Debug\net5.0\ToDoList.Domain.dll
 C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\bin\Debug\net5.0\ref\ToDoList.Domain.dll
 C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\bin\Debug\net5.0\ToDoList.Domain.pdb
-C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\obj\Debug\net5.0\ToDoList.Domain.csprojAssemblyReference.cache
 C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\obj\Debug\net5.0\ToDoList.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\obj\Debug\net5.0\ToDoList.Domain.AssemblyInfoInputs.cache
 C:\Users\DanielSoaresCaldeira\source\repos\ToDoList\ToDoList.Domain\obj\Debug\net5.0\ToDoList.Domain.AssemblyInfo.cs

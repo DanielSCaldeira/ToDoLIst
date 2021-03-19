@@ -10,19 +10,19 @@ namespace ToDoList.Interface
         /// Buscar lista de tarefas
         /// </summary>
         /// <returns></returns>
-        List<ListaDTO> Get();
+        List<TodoDTO> Get();
 
         /// <summary>
         /// Inserir tarefa
         /// </summary>
         /// <param name="registro">Registro da tarefa a ser inserida</param>
-        void Post(ListaDTO registro);
+        TodoDTO Post(TodoDTO registro);
 
         /// <summary>
         /// Atualizar tarefa
         /// </summary>
         /// <param name="registro">Registro da tarefa a ser atualizada</param>
-        void Put(ListaDTO registro);
+        void Put(TodoDTO registro);
 
         /// <summary>
         /// Excluir item da lista de tarefas
@@ -36,6 +36,6 @@ namespace ToDoList.Interface
         /// </summary>
         /// <param name="descricao">Texto para a consulta</param>
         /// <returns>Lista de itens de tarefas</returns>
-        List<Lista> Search(string descricao);
+        List<TodoItem> Search(string descricao);
     }
 }

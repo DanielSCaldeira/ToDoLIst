@@ -28,10 +28,11 @@ namespace ToDoList.API
         {
 
             //injeção de dependencia configurações que podem ser recuperadas depois
-
-            services.AddDbContext<ApplicationDbContext>(options => {
+            services.AddCors();
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
                 //declada qual tipo de base que sera utilizada
-                options.UseNpgsql(DbConnection, 
+                options.UseNpgsql(DbConnection,
                     //Declarande de onde vira as migrações
                     assembly => assembly.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName));
             });
@@ -55,9 +56,17 @@ namespace ToDoList.API
 
             }
 
+            app.UseCors(builder => builder
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+               .SetIsOriginAllowed((host) => true)
+               .AllowCredentials()
+           );
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
 
             app.UseAuthorization();
 

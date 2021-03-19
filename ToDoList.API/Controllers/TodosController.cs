@@ -8,41 +8,37 @@ namespace ToDoList.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ListaController : AppBaseController
+    public class TodosController : AppBaseController
     {
 
-        public ListaController(IServiceProvider serviceProvider) : base(serviceProvider)
+        public TodosController(IServiceProvider serviceProvider) : base(serviceProvider)
         {
         }
 
-
         [HttpGet]
-        public IEnumerable<ListaDTO> Get()
+        public IEnumerable<TodoDTO> Get()
         {
             return GetService<IListaRepository>().Get();
         }
 
         [HttpPost]
-        public string Post(ListaDTO registro)
+        public TodoDTO Post(TodoDTO registro)
         {
-            GetService<IListaRepository>().Post(registro);
-            return "Registro inserido com sucesso!";
+            return GetService<IListaRepository>().Post(registro);
         }  
         
         [HttpPut]
-        public string Put(ListaDTO registro)
+        public void Put(TodoDTO registro)
         {
             GetService<IListaRepository>().Put(registro);
-            return "Registro alterado com sucesso!";
         }
 
 
         [HttpDelete]
         [Route("{id}")]
-        public string Delete(int id)
+        public void Delete(int id)
         {
             GetService<IListaRepository>().Delete(id);
-            return "Registro excluido com sucesso!";
         }
 
 

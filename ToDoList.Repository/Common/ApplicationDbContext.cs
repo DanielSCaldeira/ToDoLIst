@@ -8,7 +8,7 @@ namespace ToDoList.Repository
         //Toda a vez que é criado o modulo ele é chamado
         //Um DbSet representa uma coleção de entidades em memoria
 
-        public virtual DbSet<Lista> Listas { get; set; }
+        public virtual DbSet<TodoItem> Listas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
