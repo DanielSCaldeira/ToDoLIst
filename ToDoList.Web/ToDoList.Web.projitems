@@ -11,7 +11,6 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)frontend\.env" />
     <None Include="$(MSBuildThisFileDirectory)frontend\.gitignore" />
-    <None Include="$(MSBuildThisFileDirectory)frontend\README.md" />
     <None Include="$(MSBuildThisFileDirectory)frontend\src\App.js" />
     <None Include="$(MSBuildThisFileDirectory)frontend\src\components\Todo.js" />
     <None Include="$(MSBuildThisFileDirectory)frontend\src\index.js" />
