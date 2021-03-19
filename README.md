@@ -1,5 +1,13 @@
 # ToDoLIst
-Aplicação .net core 5, postgresql, entity code first migration.
+Aplicação 
+  API
+  * .net core 5
+  * postgresql
+  * entity code first migration.
+  
+  FRONT END
+  
+  * reactjs
 
 API
 1) Rodar comando migration
